@@ -1,4 +1,4 @@
-# creating-a-pipeline-in-blue-ocean
+# Simple Pipeline for Node App
 
 This repository is for the
 [Create a Pipeline in Blue Ocean](https://jenkins.io/doc/tutorials/create-a-pipeline-in-blue-ocean/)
