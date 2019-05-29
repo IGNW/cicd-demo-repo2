@@ -9,7 +9,8 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'npm install -g eslint --unsafe-perm=true --allow-root'
+        sh ''' mkdir ~/.npm-global
+'''
       }
     }
   }
