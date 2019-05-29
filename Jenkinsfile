@@ -7,10 +7,9 @@ pipeline {
 
   }
   stages {
-    stage('error') {
+    stage('') {
       steps {
-        sh ''' mkdir ~/.npm-global
-'''
+        echo 'Anything gonna work here?'
       }
     }
   }
