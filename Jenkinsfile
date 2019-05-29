@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'npm install'
+        sh 'sudo npm install -g eslint --unsafe-perm=true --allow-root'
       }
     }
   }
