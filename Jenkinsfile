@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'cat /etc/*release'
+        sh 'mkdir tom'
       }
     }
   }
