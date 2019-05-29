@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'test.sh'
+        sh 'npm install'
       }
     }
   }
