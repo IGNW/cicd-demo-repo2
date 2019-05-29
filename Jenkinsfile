@@ -9,7 +9,6 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        echo 'Anything gonna work here?'
         sh 'test.sh'
       }
     }
