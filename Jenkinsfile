@@ -7,9 +7,9 @@ pipeline {
 
   }
   stages {
-    stage('error') {
+    stage('Build') {
       steps {
-        sh 'mkdir tom'
+        sh 'npm install'
       }
     }
   }
