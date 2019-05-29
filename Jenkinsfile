@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'sudo npm install'
+        sh 'npm install'
       }
     }
   }
