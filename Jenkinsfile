@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'npm install'
+        sh 'cat /etc/*release'
       }
     }
   }
