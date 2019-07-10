@@ -19,7 +19,7 @@ pipeline {
       }
       steps {
         sh './jenkins/scripts/test.sh'
-        echo 'Made it to test'
+        echo 'Made it to test test test'
       }
     }
     stage('Deliver') {
