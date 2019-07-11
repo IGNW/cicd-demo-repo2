@@ -9,8 +9,17 @@ pipeline {
   }
   stages {
     stage('Build') {
-      steps {
-        sh 'npm install'
+      parallel {
+        stage('Build') {
+          steps {
+            sh 'npm install'
+          }
+        }
+        stage('Secrets Injection') {
+          steps {
+            echo 'Secrets retrieved here'
+          }
+        }
       }
     }
     stage('Test') {
