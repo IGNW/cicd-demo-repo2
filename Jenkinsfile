@@ -9,16 +9,36 @@ pipeline {
   }
   stages {
     stage('Build') {
-      steps {
-        sh 'npm install'
+      parallel {
+        stage('Build') {
+          steps {
+            sh 'npm install'
+          }
+        }
+        stage('Secrets Injection') {
+          steps {
+            echo 'Secrets retrieved here'
+          }
+        }
       }
     }
     stage('Test') {
-      environment {
-        CI = 'true'
-      }
-      steps {
-        sh './jenkins/scripts/test.sh'
+      parallel {
+        stage('Test') {
+          environment {
+            CI = 'true'
+          }
+          steps {
+            sh './jenkins/scripts/test.sh'
+            echo 'Made it to test test test'
+            echo 'Hi Noah'
+          }
+        }
+        stage('Artifactory') {
+          steps {
+            echo 'I am delievering an Artifact'
+          }
+        }
       }
     }
     stage('Deliver') {
