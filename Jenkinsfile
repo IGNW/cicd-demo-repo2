@@ -23,13 +23,22 @@ pipeline {
       }
     }
     stage('Test') {
-      environment {
-        CI = 'true'
-      }
-      steps {
-        sh './jenkins/scripts/test.sh'
-        echo 'Made it to test test test'
-        echo 'Hi Noah'
+      parallel {
+        stage('Test') {
+          environment {
+            CI = 'true'
+          }
+          steps {
+            sh './jenkins/scripts/test.sh'
+            echo 'Made it to test test test'
+            echo 'Hi Noah'
+          }
+        }
+        stage('Artifactory') {
+          steps {
+            echo 'I am delievering an Artifact'
+          }
+        }
       }
     }
     stage('Deliver') {
