@@ -55,6 +55,11 @@ pipeline {
             echo 'Hi Tim!'
           }
         }
+        stage('YunFeng') {
+          steps {
+            echo 'Hi Yun!'
+          }
+        }
       }
     }
   }
