@@ -52,7 +52,7 @@ pipeline {
         }
         stage('TimK') {
           steps {
-            echo 'Hi Tim!'
+            echo 'Hi Tom!'
           }
         }
       }
